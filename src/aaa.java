@@ -8,7 +8,11 @@ public class aaa {
         for (a = 1; a < 10; a++) {
             for (b = 1; b <= a; b++) {
                 c= a*b;
-                System.out.print(b+" * "+a+" = "+c + "  ");
+                if(c<10){
+                    System.out.print(b+" * "+a+" = "+c + "  ");
+                }else{
+                    System.out.print(b+" * "+a+" ="+c + "  ");
+                }
             }
             System.out.println("");
         }
