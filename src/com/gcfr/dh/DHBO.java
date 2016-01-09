@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DHBO {
 	private DHDAO dhdao;
-	private Print print;
+	private Print print =new Print();
 	public DHDAO getDhdao() {
 		return dhdao;
 	}
@@ -30,7 +30,7 @@ public class DHBO {
 //		dhdao.query();
 		return print.QueryPrint();
 	}
-	public void del(String guid) throws SQLException  {
+	public void del(String guid) throws Exception  {
 //		dhdao.del(guid);
 		print.DelPrint(guid);
 	}

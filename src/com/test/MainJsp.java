@@ -3,15 +3,19 @@ package com.test;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.gcfr.dh.DHBO;
 import com.gcfr.dh.DHModel;
 
 public class MainJsp {
 
 	/**
 	 * @param args
+	 * @throws Exception 
 	 */
-	public static void main(String[] args) {
-		set();
+	public static void main(String[] args) throws Exception {
+//		set();
+		DHBO db = new DHBO();
+		db.del("1");
 	}
 
 	
@@ -23,6 +27,7 @@ public class MainJsp {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	private static void set() {
 		List<DHModel>dm = new ArrayList<DHModel>();
 		setOne(dm,"1", 1, "老大", 1);

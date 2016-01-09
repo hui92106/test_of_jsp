@@ -30,7 +30,7 @@ public class DHService {
 		}
 		}
 	}
-	public void del(List<String>guid) throws SQLException{
+	public void del(List<String>guid) throws Exception{
 //		dhbo.del(guid);
 			for (String string : guid) {
 				dhbo.del(string);
