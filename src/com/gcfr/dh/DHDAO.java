@@ -73,4 +73,23 @@ public class DHDAO {
 		ptmt.setInt(4, dh.getType());
 		ptmt.execute();
 	}
+	
+	/**
+	 * 批量新增
+	 * @param dm
+	 * @throws SQLException
+	 */
+	public void insertList(List<DHModel> dm) throws SQLException {
+		String sql = "insert into gcfr_t_assetclass values('?',?,'?',?);";
+		Connection conn = DBUtil.getConnection();
+		PreparedStatement ptmt = conn.prepareStatement(sql);
+		for (DHModel dhModel : dm) {
+			ptmt.setString(1, dhModel.getGuid());
+			ptmt.setInt(2, dhModel.getCode());
+			ptmt.setString(3, dhModel.getName());
+			ptmt.setInt(4, dhModel.getType());
+			ptmt.execute(sql);
+		}
+
+	}
 }

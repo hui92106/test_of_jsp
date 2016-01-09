@@ -33,4 +33,9 @@ public class DHModel {
 	public void setType(Integer type) {
 		this.type = type;
 	}
+	@Override
+	public String toString() {
+		return "DHModel [guid=" + guid + ", code=" + code + ", name=" + name
+				+ ", type=" + type + "]";
+	}
 }
