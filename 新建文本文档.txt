@@ -1,0 +1,16 @@
+1.问sql
+2.把编号改成NUMBER类型
+3.to_char("99",code)
+
+repalce(lpad(字段名，共几位)，‘ ’，‘0’) 
+repalce(lpad(code，2)，‘ ’，‘0’) 
+
+lpad(String ,数字长度，字符串)。
+
+select lpad(code.'2'.'0'),name,guid,type,year,..
+
+
+select * from tablecode repalce()
+
+
+creat table format 90
