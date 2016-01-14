@@ -1,0 +1,21 @@
+0.. 看D盘装了些啥，备份indi修改过的文件
+
+1.. 优盘装 格式化C,D盘
+
+3.. 账户 控制面板\所有控制面板项\管理工具
+
+2.. 装软件
+
+	1）驱动精灵，下驱动
+
+	2）输入法，winrar
+
+	3）360,不体检，不更新
+
+	4）QQ，百度，网易，potplayer，office，reader
+
+	5）hosts chorme，github
+
+	6）MyEclipse 破解，优化，sublime
+
+	7）oralce，plsql，weblogic
