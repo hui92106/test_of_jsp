@@ -1,0 +1,71 @@
+/**
+ * @Title: IntangibleAssetService.java
+ * @Copyright (C) 2016 龙图软件
+ * @Description:
+ * @Revision History:
+ * @Revision 1.0 2016-1-7  董晖
+ */
+
+package gov.mof.fasp2.gcfr.baseset.asset.intangibleasset;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.longtu.framework.annotation.PageComponent;
+import com.longtu.framework.component.AbstractComponentService;
+import com.longtu.framework.exception.AppException;
+
+/**
+ * @ClassName: IntangibleAssetService
+ * @Description: Description of this class
+ * @author <a href="mailto:donghui@szlongtu.com">董晖</a>于 2016-1-7 下午2:00:01
+ */
+@PageComponent(serviceid = "gcfr.baseset.asset.intangibleasset.IntangibleAssetService", viewid = "gcfr.baseset.asset.intangibleasset.IntangibleAssetService", jsLib = "/gcfr/baseset/asset/intangibleAssetService.js", jsObjectName = "Ext.lt.gcfr.baseset.intangibleAssetService")
+public class IntangibleAssetService extends AbstractComponentService {
+    /**
+     * @param IntangibleAssetBO
+     */
+    @Resource(name = "gcfr.baseset.asset.intangibleasset.IntangibleAssetBO")
+    private IntangibleAssetBO intangibleAssetBO = null;
+    /**
+     * 加载后数据.
+     * <p>Title: loadComponent</p>
+     * <p>Description: </p>
+     * @param request - HttpServletRequest
+     * @param response - HttpServletResponse
+     * @param config - Map
+     * @return rawtypes
+     * @throws Exception - 异常
+     * @see com.longtu.framework.component.AbstractComponentService#loadComponent(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse, java.util.Map)
+     */
+    @SuppressWarnings("rawtypes")
+    @Override
+    public Map loadComponent(HttpServletRequest request, HttpServletResponse response, Map config) throws Exception {
+
+        return config;
+    }
+
+    /**
+     * 保存方法.
+     * @param map - HashMap<String, Object>
+     * @return returnMap
+     * @throws AppException 异常
+     * @throws
+     */
+    public Map<String, Object> save(HashMap<String, Object> map) throws AppException {
+        String msg = "";
+        Map<String, Object> returnMap = new HashMap<String, Object>();
+        try {
+            this.intangibleAssetBO.save(map);
+            msg = "保存成功！";
+        } catch (AppException e) {
+            msg = "保存失败！";
+        }
+        returnMap.put("msg", msg);
+        return returnMap;
+    }
+}

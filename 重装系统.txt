@@ -1,4 +1,13 @@
-0.. 看D盘装了些啥，备份indi修改过的文件
+0.. 看D盘装了些啥，备份indi修改过的文件，feiq
+
+0..1..myeclipse checkstyle,svn,indi,
+
+      plsql 快捷键
+
+      svn 地址，开发部，质量部，支付，财务
+
+      editplus
+
 
 1.. 优盘装 格式化C,D盘
 
@@ -19,3 +28,7 @@
 	6）MyEclipse 破解，优化，sublime
 
 	7）oralce，plsql，weblogic
+
+	8）svn，
+
+	9) 下班时候装补丁

@@ -1,0 +1,11 @@
+	<!-- 固定资产 -->
+    <bean id="gcfr.baseset.fixedasset.FixedAssetPage" class="gov.mof.fasp2.gcfr.baseset.fixedasset.FixedAssetPage"></bean>
+	<bean id="gcfr.baseset.fixedasset.FixedAssetService" class="gov.mof.fasp2.gcfr.baseset.fixedasset.FixedAssetService"></bean>
+	<bean id="gcfr.baseset.fixedasset.FixedAssetBO" class="gov.mof.fasp2.gcfr.baseset.fixedasset.FixedAssetBO"></bean>
+	<bean id="gcfr.baseset.fixedasset.FixedAssetDAO" class="gov.mof.fasp2.gcfr.baseset.fixedasset.FixedAssetDAO"></bean>
+	
+	<!-- 无形资产 -->
+    <bean id="gcfr.baseset.intangibleasset.IntangibleAssetPage" class="gov.mof.fasp2.gcfr.baseset.intangibleasset.IntangibleAssetPage"></bean>
+	<bean id="gcfr.baseset.intangibleasset.IntangibleAssetService" class="gov.mof.fasp2.gcfr.baseset.intangibleasset.IntangibleAssetService"></bean>
+	<bean id="gcfr.baseset.intangibleasset.IntangibleAssetBO" class="gov.mof.fasp2.gcfr.baseset.intangibleasset.IntangibleAssetBO"></bean>
+	<bean id="gcfr.baseset.intangibleasset.IntangibleAssetDAO" class="gov.mof.fasp2.gcfr.baseset.intangibleasset.IntangibleAssetDAO"></bean>

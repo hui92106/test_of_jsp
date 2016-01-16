@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/YFB-CODE/!svn/ver/17019/product/finreport/GCFR/src/gov/mof/fasp2/gcfr/baseset/asset/intangibleasset
+END
+IntangibleAssetBO.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/YFB-CODE/!svn/ver/17103/product/finreport/GCFR/src/gov/mof/fasp2/gcfr/baseset/asset/intangibleasset/IntangibleAssetBO.java
+END
+IntangibleAssetDAO.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/YFB-CODE/!svn/ver/17019/product/finreport/GCFR/src/gov/mof/fasp2/gcfr/baseset/asset/intangibleasset/IntangibleAssetDAO.java
+END
+IntangibleAssetPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/YFB-CODE/!svn/ver/17019/product/finreport/GCFR/src/gov/mof/fasp2/gcfr/baseset/asset/intangibleasset/IntangibleAssetPage.java
+END
+IntangibleAssetService.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/YFB-CODE/!svn/ver/17019/product/finreport/GCFR/src/gov/mof/fasp2/gcfr/baseset/asset/intangibleasset/IntangibleAssetService.java
+END

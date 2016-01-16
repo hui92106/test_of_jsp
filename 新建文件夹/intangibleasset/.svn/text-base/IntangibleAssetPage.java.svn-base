@@ -1,0 +1,48 @@
+/**
+ * @Title: IntangibleAssetPage.java
+ * @Copyright (C) 2016 龙图软件
+ * @Description:
+ * @Revision History:
+ * @Revision 1.0 2016-1-7  董晖
+ */
+
+package gov.mof.fasp2.gcfr.baseset.asset.intangibleasset;
+
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.longtu.framework.annotation.PageComponent;
+import com.longtu.framework.annotation.PageConsole;
+import com.longtu.framework.annotation.PageTemplate;
+import com.longtu.framework.server.AbstractPageService;
+
+/**
+ * @ClassName: IntangibleAssetPage
+ * @Description: Description of this class
+ * @author <a href="mailto:donghui@szlongtu.com">董晖</a>于 2016-1-7 下午1:52:39
+ */
+
+public class IntangibleAssetPage extends AbstractPageService {
+    /**
+     * 无形资产页面.
+     * @param request - HttpServletRequest
+     * @param response - HttpServletResponse
+     * @param config - Map
+     * @return rawtypes
+     * @throws Exception - 异常
+     */
+    @SuppressWarnings("rawtypes")
+    @PageConsole(appid = "gcfr", url = "/gcfr/asset/intangibleasset", page = "/gcfr/template/gcfr_default.jsp", config = "{header:[gcfrheader, gcfrmenu, toolbuttonbar],"
+            + "main:[uidatatable]}", pageTempltate = @PageTemplate(funcShow = "Ext.lt.gcfr.template"), region = "maindiv", component = {
+            @PageComponent(serviceid = "busfwtoolbutton", id = "toolbuttonbar", config = "{querybanner:false,background:false}"),
+            @PageComponent(serviceid = "busfwuidatatable", id = "uidatatable", config = "{title:'无形资产类别',checkbox:true,edit:true}"),
+            @PageComponent(serviceid = "gcfr.common.component.gcfrheader", id = "gcfrheader"),
+            @PageComponent(serviceid = "gcfr.common.component.gcfrmenu", id = "gcfrmenu"),
+            @PageComponent(serviceid = "gcfr.baseset.asset.intangibleasset.IntangibleAssetService", id = "gcfr_baseset_asset_intangibleasset_IntangibleAssetService") })
+    public Map fixedAsset(HttpServletRequest request, HttpServletResponse response, Map config) throws Exception {
+        return config;
+
+    }
+}

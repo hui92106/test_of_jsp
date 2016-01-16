@@ -1,0 +1,80 @@
+/**
+ * @Title: IntangibleAssetBO.java
+ * @Copyright (C) 2016 龙图软件
+ * @Description:
+ * @Revision History:
+ * @Revision 1.0 2016-1-7  董晖
+ */
+
+package gov.mof.fasp2.gcfr.baseset.asset.intangibleasset;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import javax.annotation.Resource;
+
+import com.longtu.framework.exception.AppException;
+
+import gov.mof.fasp2.gcfr.common.GcfrBO;
+import gov.mof.fasp2.gcfr.util.SqlUtil;
+
+/**
+ * @ClassName: IntangibleAssetBO
+ * @Description: Description of this class
+ * @author <a href="mailto:donghui@szlongtu.com">董晖</a>于 2016-1-7 下午1:58:48
+ */
+
+public class IntangibleAssetBO extends GcfrBO {
+    /**
+     * fixedAssetDao.
+     */
+    @Resource(name = "gcfr.baseset.asset.intangibleasset.IntangibleAssetDAO")
+    private IntangibleAssetDAO intangibleAssetDAO = null;
+
+    /**
+     * 根据type获取所有固定资产数据.
+     * <p>Title: getVodSql</p>
+     * <p>Description: </p>
+     * @param sqlmap - sqlmap
+     * @return rawtypes
+     * @throws AppException - AppException
+     * @see gov.mof.fasp2.gcfr.common.GcfrBO#getVodSql(java.util.Map)
+     */
+    @SuppressWarnings("rawtypes")
+    @Override
+    public String getVodSql(Map sqlmap) throws AppException {
+        return intangibleAssetDAO.queryByType();
+    }
+
+    /**
+     * 对应保存按钮，数据的新增，修改，删除.
+     * @param map - Map<String, Object>
+     * @throws AppException - AppException
+     * @throws
+     */
+    @SuppressWarnings("unchecked")
+    public void save(Map<String, Object> map) throws AppException {
+        List<Map<String, Object>> insertList = (List<Map<String, Object>>) map.get("insertAsset");
+        List<Map<String, Object>> updateList = (List<Map<String, Object>>) map.get("updateAsset");
+        List<String> delList = (List<String>) map.get("delAsset");
+        List<Map<String, Object>> updateMap = new ArrayList<Map<String, Object>>();
+        List<Map<String, Object>> insertMap = new ArrayList<Map<String, Object>>();
+
+        if (insertList.size() > 0) {
+            for (Map<String, Object> map1 : insertList) {
+                insertMap.add((Map<String, Object>) map1.put("guid", SqlUtil.createGUID()));
+            }
+            this.intangibleAssetDAO.insertIntangibleAsset(insertMap);
+        }
+        if (updateList.size() > 0) {
+            for (Map<String, Object> map2 : updateList) {
+                updateMap.add((Map<String, Object>) map2.get("nowData"));
+            }
+            this.intangibleAssetDAO.updateIntangibleAsset(updateMap);
+        }
+        if (delList.size() > 0) {
+            this.intangibleAssetDAO.delIntangibleAsset(delList);
+        }
+    }
+}
